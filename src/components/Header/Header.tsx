@@ -1,13 +1,19 @@
+import Logotype from "./components/Logotype";
+import Menu from "./components/Menu";
+import Contact from "./components/Contact";
 
+interface HeaderProps {}
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = (): React.ReactElement => {
+  return (
+    <header className="bg-black text-white">
+      <nav className="flex justify-between items-center">
+        <Logotype />
+        <Menu />
+        <Contact />
+      </nav>
+    </header>
+  );
+};
 
-    return (
-      <>
-      
-      </>
-    )
-  }
-  
-  export default Header
-  
+export default Header;
