@@ -6,7 +6,7 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = (): React.ReactElement => {
   return (
-    <header className="bg-black text-general">
+    <header className="text-general">
       <nav className="flex px-8 justify-between items-center">
         <Logotype />
         <Menu />

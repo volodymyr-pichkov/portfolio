@@ -5,7 +5,7 @@ interface MainProps {}
 
 const Main: React.FC<MainProps> = (): React.ReactElement => {
   return (
-    <main className="bg-black text-white">
+    <main className="text-white">
       <Title />
       <nav>
         <Menu />
