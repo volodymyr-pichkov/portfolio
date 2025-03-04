@@ -4,7 +4,7 @@ interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = (): React.ReactElement => {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black px-8 pb-6">
     <Network />
     </footer>
   );

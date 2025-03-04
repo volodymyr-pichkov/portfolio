@@ -1,12 +1,12 @@
-const list = "src/assets/list.svg";
-const adventures = "src/assets/adventures.svg";
-const horrors = "src/assets/horrors.svg";
-const mysticism = "src/assets/mysticism.svg";
-const detective = "src/assets/detective.svg";
-const sciFi = "src/assets/sci-fi.svg";
-const divide = "src/assets/vertical-divide.svg";
+const list = "src/assets/catalog/list.svg";
+const adventures = "src/assets/catalog/adventures.svg";
+const horrors = "src/assets/catalog/horrors.svg";
+const mysticism = "src/assets/catalog/mysticism.svg";
+const detective = "src/assets/catalog/detective.svg";
+const sciFi = "src/assets/catalog/sci-fi.svg";
+const divide = "src/assets/catalog/vertical-divide.svg";
 
-const MainMenu: React.FC = (): React.ReactElement => {
+const Menu: React.FC = (): React.ReactElement => {
   return (
     <ul className="flex justify-between items-center">
       <li className="flex">
@@ -42,4 +42,4 @@ const MainMenu: React.FC = (): React.ReactElement => {
   );
 };
 
-export default MainMenu;
+export default Menu;

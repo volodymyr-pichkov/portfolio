@@ -1,4 +1,4 @@
-import MainMenu from "./components/MainMenu";
+import Menu from "./components/Menu";
 import Title from "./components/Title";
 
 interface MainProps {}
@@ -8,7 +8,7 @@ const Main: React.FC<MainProps> = (): React.ReactElement => {
     <main className="bg-black text-white">
       <Title />
       <nav>
-        <MainMenu />
+        <Menu />
       </nav>
     </main>
   );

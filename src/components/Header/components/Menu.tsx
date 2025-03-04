@@ -1,20 +1,54 @@
+import { NavLink, Link } from "react-router-dom";
+
 const Menu: React.FC = (): React.ReactElement => {
   return (
-    <ul className="flex gap-12">
+    <ul className="flex gap-12 pt-10 mb-4 font-raleway font-semibold text-sm break-words tracking-navigation">
       <li>
-        <a href="#">КВЕСТЫ</a>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? "text-navigation" : "text-general"
+          }
+        >
+          КВЕСТЫ
+        </NavLink>
       </li>
       <li>
-        <a href="#">НОВИЧКАМ</a>
+        <NavLink
+          to="#"
+          // className={({ isActive }) =>
+          //   isActive ? "text-navigation" : "text-general"
+          // }
+        >
+          НОВИЧКАМ
+        </NavLink>
       </li>
       <li>
-        <a href="#">ОТЗЫВЫ</a>
+        <NavLink
+          to="#"
+          // className={({ isActive }) =>
+          //   isActive ? "text-navigation" : "text-general"
+          // }
+        >
+          ОТЗЫВЫ
+        </NavLink>
       </li>
       <li>
-        <a href="#">АКЦИИ</a>
+        <NavLink
+          to="#"
+          // className={({ isActive }) =>
+          //   isActive ? "text-navigation" : "text-general"
+          // }
+        >
+          АКЦИИ
+        </NavLink>
       </li>
       <li>
-        <a href="#">КОНТАКТЫ</a>
+        <Link
+          to="#"
+        >
+          КОНТАКТЫ
+        </Link>
       </li>
     </ul>
   );
