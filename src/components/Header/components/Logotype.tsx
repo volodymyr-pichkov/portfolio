@@ -1,5 +1,5 @@
-const logo = "/src/assets/header/logo.svg";
-const typo = "/src/assets/header/typography.svg";
+import logo from "/src/assets/header/logo.svg";
+import typo from "/src/assets/header/typography.svg";
 
 const Logotype: React.FC = (): React.ReactElement => {
   return (

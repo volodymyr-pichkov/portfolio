@@ -1,10 +1,10 @@
-const list = "src/assets/catalog/list.svg";
-const adventures = "src/assets/catalog/adventures.svg";
-const horrors = "src/assets/catalog/horrors.svg";
-const mysticism = "src/assets/catalog/mysticism.svg";
-const detective = "src/assets/catalog/detective.svg";
-const sciFi = "src/assets/catalog/sci-fi.svg";
-const divide = "src/assets/catalog/vertical-divide.svg";
+import list from "../../../assets/catalog/list.svg";
+import adventures from "../../../assets/catalog/adventures.svg";
+import horrors from "../../../assets/catalog/horrors.svg";
+import mysticism from "../../../assets/catalog/mysticism.svg";
+import detective from "../../../assets/catalog/detective.svg";
+import sciFi from "../../../assets/catalog/sci-fi.svg";
+import divide from "../../../assets/catalog/vertical-divide.svg";
 
 const Menu: React.FC = (): React.ReactElement => {
   return (

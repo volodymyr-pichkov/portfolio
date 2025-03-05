@@ -1,5 +1,5 @@
-const skype = "/src/assets/footer/skype.svg";
-const vk = "/src/assets/footer/vk.svg";
+import skype from "/src/assets/footer/skype.svg";
+import vk from "/src/assets/footer/vk.svg";
 
 const Network: React.FC = () => {
   return (
