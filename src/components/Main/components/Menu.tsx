@@ -9,16 +9,19 @@ import sciFi from "@/assets/icons/sci-fi.svg";
 const Menu: React.FC = (): React.ReactElement => {
   return (
     <ul className="flex justify-between items-center pt-[57px] ml-[136px] mr-[200px]">
-      <NavLink
-        to="#"
-        className={({ isActive }) =>
-          `shrink-0 ${isActive ? "border-b-2 border-navigation" : ""}`
-        }
-      >
-        <li className="flex border-r border-white border-opacity-30">
-          <img src={list} alt="list" className="mr-3" />
-          <p className="mr-10">Все квесты</p>
-        </li>
+      <NavLink to="#">
+        {({ isActive }) => (
+          <li className="flex border-r border-white border-opacity-30">
+            <img src={list} alt="list" className="mr-3" />
+            <p
+              className={`mr-10 ${
+                isActive ? "shrink-0 border-b-2 border-navigation" : ""
+              }`}
+            >
+              Все квесты
+            </p>
+          </li>
+        )}
       </NavLink>
       <NavLink to="#">
         <li className="flex border-r border-white border-opacity-30">
