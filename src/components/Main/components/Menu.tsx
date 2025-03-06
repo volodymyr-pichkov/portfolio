@@ -47,7 +47,7 @@ const Menu: React.FC = (): React.ReactElement => {
           <p className="mr-10">Детектив</p>
         </li>
       </NavLink>
-      <NavLink to="#">
+      <NavLink to="/invalid-path">
         <li className="flex">
           <img src={sciFi} alt="sci-fi" className="mr-3" />
           <p>Sci-fi</p>
