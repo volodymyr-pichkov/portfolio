@@ -12,12 +12,16 @@ const Catalog: React.FC = () => {
     ];
   
     return (
-      <div className="grid grid-rows-3 grid-cols-3 gap-6">
+      <div className="grid grid-rows-3 grid-cols-3 gap-6 mt-14 ml-[136px] mr-[150px]">
+
         {cards.map((card, index) => (
+
           <div key={index}>
             <img src={card.image} alt={card.title} />
           </div>
+
         ))}
+        
       </div>
     );
   };
