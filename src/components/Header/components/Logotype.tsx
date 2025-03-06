@@ -1,4 +1,4 @@
-import logo from "/src/assets/header/logo.png";
+import logo from "/src/assets/logotype/logo.png";
 
 const Logotype: React.FC = (): React.ReactElement => {
   return (

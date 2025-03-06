@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import skype from "/src/assets/footer/skype.svg";
-import vk from "/src/assets/footer/vk.svg";
+import skype from "/src/assets/network/skype.svg";
+import vk from "/src/assets/network/vk.svg";
 
 const Network: React.FC = () => {
   return (
