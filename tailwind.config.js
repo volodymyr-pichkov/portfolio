@@ -8,6 +8,9 @@ export default {
         navigation: "#f2890f",
         skype: '#c6c4c2',
       },
+      backgroundImage: {
+        'catalog': 'linear-gradient(0deg, #141414 0%, #1F1D1D 100%)',
+      },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
