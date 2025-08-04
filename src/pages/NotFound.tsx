@@ -1,4 +1,4 @@
-const NotFound: React.FC = (): React.ReactElement => {
+const NotFound: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="text-center">

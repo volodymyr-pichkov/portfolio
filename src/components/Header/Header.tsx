@@ -1,6 +1,6 @@
-import Logotype from "./components/Logotype";
-import Menu from "./components/Menu";
-import Contact from "./components/Contact";
+import Logotype from "@/components/Header/components/Logotype";
+import Menu from "@/components/Header/components/Menu";
+import Contact from "@/components/Header/components/Contact";
 
 const Header: React.FC = () => {
   return (

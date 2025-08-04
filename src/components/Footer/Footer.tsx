@@ -1,4 +1,4 @@
-import Network from "./components/Network";
+import Network from "@/components/Footer/components/Network";
 
 const Footer: React.FC = () => {
   return (

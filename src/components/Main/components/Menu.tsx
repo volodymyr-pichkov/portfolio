@@ -24,30 +24,32 @@ const menuItems: MenuItem[] = [
 
 const Menu: React.FC = () => {
   return (
-    <ul className="flex justify-between items-center pt-[57px] ml-[136px] mr-[200px]">
-      {menuItems.map(({ to, icon, alt, label }, index) => (
-        <li
-          key={alt}
-          className={`flex ${
-            index !== menuItems.length - 1
-              ? "border-r border-white border-opacity-30"
-              : ""
-          }`}
-        >
-          <NavLink
-            to={to}
-            className={({ isActive }) =>
-              `flex items-center mr-10 ${
-                isActive ? "shrink-0 border-b-2 border-navigation" : ""
-              }`
-            }
+    <nav>
+      <ul className="flex justify-between items-center pt-[57px] ml-[136px] mr-[200px]">
+        {menuItems.map(({ to, icon, alt, label }, index) => (
+          <li
+            key={alt}
+            className={`flex ${
+              index !== menuItems.length - 1
+                ? "border-r border-white border-opacity-30"
+                : ""
+            }`}
           >
-            <img src={icon} alt={alt} className="mr-3" />
-            <p>{label}</p>
-          </NavLink>
-        </li>
-      ))}
-    </ul>
+            <NavLink
+              to={to}
+              className={({ isActive }) =>
+                `flex items-center mr-10 ${
+                  isActive ? "shrink-0 border-b-2 border-navigation" : ""
+                }`
+              }
+            >
+              <img src={icon} alt={alt} className="mr-3" />
+              <p>{label}</p>
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
