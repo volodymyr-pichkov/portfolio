@@ -23,3 +23,5 @@ const Network: React.FC = () => {
 };
 
 export default Network;
+
+// Подгони иконки под 28x28
