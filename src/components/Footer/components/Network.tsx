@@ -1,19 +1,23 @@
-import { Link } from "react-router-dom";
-import skype from "/src/assets/network/skype.svg";
-import vk from "/src/assets/network/vk.svg";
+import facebook from "@/assets/network/facebook.svg";
+import telegram from "@/assets/network/telegram.svg";
 
 const Network: React.FC = () => {
   return (
-    <div className="flex gap-2">
-      <Link
-        to="#"
-        className="flex justify-center items-center w-7 h-7 bg-skype rounded-full border border-black"
+    <div className="flex shrink-0 gap-2 pl-8 pb-6">
+      <a
+        href="https://www.facebook.com/?locale=ru_RU"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <img src={skype} alt="skype" />
-      </Link>
-      <Link to="#">
-        <img src={vk} alt="vkontakte" />
-      </Link>
+        <img src={facebook} alt="facebook" className="w-7 h-7" />
+      </a>
+      <a
+        href="https://web.telegram.org/k/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={telegram} alt="telegram" className="w-7 h-7" />
+      </a>
     </div>
   );
 };

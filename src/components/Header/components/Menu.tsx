@@ -1,8 +1,8 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Menu: React.FC = () => {
   return (
-    <ul className="flex gap-12 pt-10 mb-4 font-raleway font-semibold text-sm break-words tracking-navigation">
+    <ul className="flex shrink-0 items-center gap-12 pt-10 pb-4 font-raleway text-sm non-italic font-semibold leading-normal tracking-navigation lining-nums	proportional-nums">
       <li>
         <NavLink
           to="/"
@@ -44,7 +44,14 @@ const Menu: React.FC = () => {
         </NavLink>
       </li>
       <li>
-        <Link to="#">КОНТАКТЫ</Link>
+        <NavLink
+          to="#"
+          // className={({ isActive }) =>
+          //   isActive ? "text-navigation" : "text-general"
+          // }
+        >
+          КОНТАКТЫ
+        </NavLink>
       </li>
     </ul>
   );

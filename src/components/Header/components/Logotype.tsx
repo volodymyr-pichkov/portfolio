@@ -1,11 +1,7 @@
-import logo from "/src/assets/logotype/logo.png";
+import logo from "@/assets/logotype/logo.png";
 
 const Logotype: React.FC = () => {
-  return (
-    <div className="flex pt-6">
-      <img src={logo} alt="logo" />
-    </div>
-  );
+  return <img src={logo} alt="logo" className="flex shrink-0 pt-6 pb-0" />;
 };
 
 export default Logotype;

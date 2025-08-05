@@ -1,6 +1,6 @@
 const Contact: React.FC = () => {
   return (
-    <p className="pt-10 mb-4 font-roboto font-semibold leading-normal text-sm break-words tracking-navigation">
+    <p className="shrink-0 pt-10 pb-4 font-raleway text-sm non-italic font-semibold leading-normal tracking-navigation lining-nums proportional-nums whitespace-nowrap">
       +380 (777) 88-99
     </p>
   );
