@@ -18,7 +18,7 @@ const Quest: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center"
+      className="min-h-screen w-full bg-cover bg-center"
       style={{ backgroundImage: `url(${quest.image})` }}
     >
       <Header />

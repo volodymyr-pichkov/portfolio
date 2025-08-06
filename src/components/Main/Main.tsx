@@ -4,7 +4,7 @@ import Catalog from "@/components/Main/components/Catalog";
 
 const Main: React.FC = () => {
   return (
-    <main className="text-white">
+    <main className="text-white w-full">
       <Title />
       <Menu />
       <Catalog />

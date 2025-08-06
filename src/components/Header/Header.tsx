@@ -5,7 +5,7 @@ import Contact from "@/components/Header/components/Contact";
 const Header: React.FC = () => {
   return (
     <header className="text-general w-full">
-      <nav className="flex justify-between items-center px-8 gap-64">
+      <nav className="flex flex-wrap justify-between items-center">
         <Logotype />
         <Menu />
         <Contact />

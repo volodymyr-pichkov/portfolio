@@ -4,7 +4,7 @@ import Footer from "@/components/Footer/Footer";
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-catalog">
+    <div className="bg-catalog w-full">
       <Header />
       <Main />
       <Footer />

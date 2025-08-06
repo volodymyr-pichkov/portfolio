@@ -1,6 +1,6 @@
 const NotFound: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+    <div className="flex items-center justify-center min-h-screen w-full bg-gray-100 px-4">
       <div className="text-center">
         <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-red-500">
           404

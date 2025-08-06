@@ -25,11 +25,19 @@ const menuItems: MenuItem[] = [
 const Menu: React.FC = () => {
   return (
     <nav>
-      <ul className="flex justify-between items-center pt-[57px] ml-[136px] mr-[200px]">
+      <ul
+        className="
+        flex justify-between items-center pt-[57px]
+        px-4           /* добавляем внутренние отступы слева и справа */
+        sm:px-8        /* на маленьких экранах немного больше отступов */
+        md:ml-[136px] md:mr-[200px]  /* на средних и выше - старые отступы */
+        overflow-x-auto whitespace-nowrap /* чтобы меню можно было скроллить, если очень узко */
+      "
+      >
         {menuItems.map(({ to, icon, alt, label }, index) => (
           <li
             key={alt}
-            className={`flex ${
+            className={`flex items-center ${
               index !== menuItems.length - 1
                 ? "border-r border-white border-opacity-30"
                 : ""
@@ -38,13 +46,13 @@ const Menu: React.FC = () => {
             <NavLink
               to={to}
               className={({ isActive }) =>
-                `flex items-center mr-10 ${
+                `flex items-center px-2 sm:px-4 ${
                   isActive ? "shrink-0 border-b-2 border-navigation" : ""
                 }`
               }
             >
-              <img src={icon} alt={alt} className="mr-3" />
-              <p>{label}</p>
+              <img src={icon} alt={alt} className="mr-2 sm:mr-3" />
+              <p className="text-sm sm:text-base">{label}</p>
             </NavLink>
           </li>
         ))}
