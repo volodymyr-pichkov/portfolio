@@ -1,14 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Menu: React.FC = () => {
+  const location = useLocation();
+  const isQuestActive =
+    location.pathname === "/" || location.pathname.startsWith("/quest/");
+
   return (
     <ul className="flex flex-wrap items-center gap-12 pt-10 pb-4 font-raleway text-sm non-italic font-semibold leading-normal tracking-navigation lining-nums	proportional-nums">
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) =>
-            isActive ? "text-navigation" : "text-general"
-          }
+          className={() => (isQuestActive ? "text-navigation" : "text-general")}
         >
           КВЕСТЫ
         </NavLink>

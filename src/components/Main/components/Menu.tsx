@@ -14,7 +14,7 @@ interface MenuItem {
 }
 
 const menuItems: MenuItem[] = [
-  { to: "#", icon: list, alt: "list", label: "Все квесты" },
+  { to: "/", icon: list, alt: "list", label: "Все квесты" },
   { to: "/1", icon: adventures, alt: "adventures", label: "Приключения" },
   { to: "/2", icon: horrors, alt: "horrors", label: "Ужасы" },
   { to: "/3", icon: mysticism, alt: "mysticism", label: "Мистика" },
@@ -24,35 +24,26 @@ const menuItems: MenuItem[] = [
 
 const Menu: React.FC = () => {
   return (
-    <nav>
-      <ul
-        className="
-        flex justify-between items-center pt-[57px]
-        px-4           /* добавляем внутренние отступы слева и справа */
-        sm:px-8        /* на маленьких экранах немного больше отступов */
-        md:ml-[136px] md:mr-[200px]  /* на средних и выше - старые отступы */
-        overflow-x-auto whitespace-nowrap /* чтобы меню можно было скроллить, если очень узко */
-      "
-      >
+    <nav className="flex items-center pl-[8.5rem] mt-12">
+      <ul className="flex gap-x-10">
         {menuItems.map(({ to, icon, alt, label }, index) => (
           <li
             key={alt}
-            className={`flex items-center ${
+            className={`flex ${
               index !== menuItems.length - 1
                 ? "border-r border-white border-opacity-30"
                 : ""
             }`}
           >
-            <NavLink
-              to={to}
-              className={({ isActive }) =>
-                `flex items-center px-2 sm:px-4 ${
-                  isActive ? "shrink-0 border-b-2 border-navigation" : ""
-                }`
-              }
-            >
-              <img src={icon} alt={alt} className="mr-2 sm:mr-3" />
-              <p className="text-sm sm:text-base">{label}</p>
+            <NavLink to={to} className="flex items-center gap-x-3 pr-[2.5rem]">
+              {({ isActive }) => (
+                <>
+                  <img src={icon} alt={alt} />
+                  <p className={isActive ? "border-b-2 border-navigation" : ""}>
+                    {label}
+                  </p>
+                </>
+              )}
             </NavLink>
           </li>
         ))}

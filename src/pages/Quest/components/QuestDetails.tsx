@@ -1,10 +1,10 @@
 import { QuestType } from "@data/questsData";
 
-interface MainQuestProps {
+interface QuestDetailsProps {
   quest: QuestType;
 }
 
-const MainQuest: React.FC<MainQuestProps> = ({
+const QuestDetails: React.FC<QuestDetailsProps> = ({
   quest: { genre, title, duration, players, difficulty, description },
 }) => {
   return (
@@ -30,4 +30,4 @@ const MainQuest: React.FC<MainQuestProps> = ({
   );
 };
 
-export default MainQuest;
+export default QuestDetails;
