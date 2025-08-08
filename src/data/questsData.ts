@@ -1,12 +1,12 @@
-import sklepImg from "../assets/images/sklep.png";
-import manyakImg from "../assets/images/manyak.png";
-import ritualImg from "../assets/images/ritual.png";
-import mars2056Img from "../assets/images/mars-2056.png";
-import mansionImg from "../assets/images/mansion.png";
-import hizhinaImg from "../assets/images/hizhina.png";
-import experimentImg from "../assets/images/experiment.png";
-import metro2033Img from "../assets/images/metro-2033.png";
-import cherdakImg from "../assets/images/cherdak.png";
+import sklepImg from "@/assets/images/sklep.png";
+import manyakImg from "@/assets/images/manyak.png";
+import ritualImg from "@/assets/images/ritual.png";
+import mars2056Img from "@/assets/images/mars-2056.png";
+import mansionImg from "@/assets/images/mansion.png";
+import hizhinaImg from "@/assets/images/hizhina.png";
+import experimentImg from "@/assets/images/experiment.png";
+import metro2033Img from "@/assets/images/metro-2033.png";
+import cherdakImg from "@/assets/images/cherdak.png";
 
 export interface QuestType {
   id: string;

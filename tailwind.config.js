@@ -26,6 +26,11 @@ export default {
       },
       stroke: {
         divider: "rgba(255, 255, 255, 0.5)",
+        dividerLight: "rgba(255, 255, 255, 0.3)",
+      },
+      padding: {
+        600: "600px",
+        632: "632px",
       },
     },
   },

@@ -25,7 +25,7 @@ const Catalog: React.FC = () => {
                 />
                 {players}
               </span>
-              <div className="border-r stroke-1 stroke-divider mx-3 h-5"></div>
+              <div className="border-r stroke-1 stroke-divider opacity-50 mx-3 h-5"></div>
               <span className="flex gap-2 lining-nums proportional-nums font-raleway text-xs non-italic font-medium leading-[1.1rem] text-questInfo opacity-80">
                 <img
                   src={difficultyIcon}
