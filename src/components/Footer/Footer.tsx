@@ -1,5 +1,5 @@
 import Network from "@/components/Footer/components/Network";
-
+// НУЖЕН ФИКС ВЫХОДА ЗА ЭКРАН
 const Footer: React.FC = () => {
   return (
     <>
