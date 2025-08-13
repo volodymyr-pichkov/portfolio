@@ -1,12 +1,12 @@
-import sklepImg from "@/assets/images/sklep.png";
-import manyakImg from "@/assets/images/manyak.png";
-import ritualImg from "@/assets/images/ritual.png";
-import mars2056Img from "@/assets/images/mars-2056.png";
-import mansionImg from "@/assets/images/mansion.png";
-import hizhinaImg from "@/assets/images/hizhina.png";
-import experimentImg from "@/assets/images/experiment.png";
-import metro2033Img from "@/assets/images/metro-2033.png";
-import cherdakImg from "@/assets/images/cherdak.png";
+import sklepImg from "@/assets/images/sklep.webp";
+import manyakImg from "@/assets/images/manyak.webp";
+import ritualImg from "@/assets/images/ritual.webp";
+import mars2056Img from "@/assets/images/mars-2056.webp";
+import mansionImg from "@/assets/images/mansion.webp";
+import hizhinaImg from "@/assets/images/hizhina.webp";
+import experimentImg from "@/assets/images/experiment.webp";
+import metro2033Img from "@/assets/images/metro-2033.webp";
+import cherdakImg from "@/assets/images/cherdak.webp";
 
 export interface QuestType {
   id: string;
@@ -23,7 +23,7 @@ export const cards: QuestType[] = [
   {
     id: "sklep",
     title: "Склеп",
-    genre: "Ужасы",
+    genre: "horrors",
     duration: "60 минут",
     players: "2-5 чел",
     difficulty: "сложный",
@@ -34,7 +34,7 @@ export const cards: QuestType[] = [
   {
     id: "manyak",
     title: "Маньяк",
-    genre: "Триллер",
+    genre: "thriller",
     duration: "75 минут",
     players: "3-6 чел",
     difficulty: "средний",
@@ -45,7 +45,7 @@ export const cards: QuestType[] = [
   {
     id: "ritual",
     title: "Ритуал",
-    genre: "Мистика",
+    genre: "mysticism",
     duration: "50 минут",
     players: "3-5 чел",
     difficulty: "легкий",
@@ -56,7 +56,7 @@ export const cards: QuestType[] = [
   {
     id: "mars-2056",
     title: "Марс-2056",
-    genre: "Научная фантастика",
+    genre: "sci-fi",
     duration: "90 минут",
     players: "2-4 чел",
     difficulty: "легкий",
@@ -67,7 +67,7 @@ export const cards: QuestType[] = [
   {
     id: "mansion",
     title: "Тайны старого особняка",
-    genre: "Детектив",
+    genre: "detective",
     duration: "80 минут",
     players: "2-5 чел",
     difficulty: "легкий",
@@ -78,7 +78,7 @@ export const cards: QuestType[] = [
   {
     id: "hizhina",
     title: "Хижина в лесу",
-    genre: "Ужасы",
+    genre: "horrors",
     duration: "70 минут",
     players: "4-7 чел",
     difficulty: "средний",
@@ -89,7 +89,7 @@ export const cards: QuestType[] = [
   {
     id: "experiment",
     title: "Фатальный эксперимент",
-    genre: "Научная фантастика",
+    genre: "sci-fi",
     duration: "85 минут",
     players: "5-8 чел",
     difficulty: "сложный",
@@ -100,7 +100,7 @@ export const cards: QuestType[] = [
   {
     id: "metro-2033",
     title: "Метро 2033",
-    genre: "Постапокалипсис",
+    genre: "post-apocalypse",
     duration: "90 минут",
     players: "6-8 чел",
     difficulty: "средний",
@@ -111,7 +111,7 @@ export const cards: QuestType[] = [
   {
     id: "cherdak",
     title: "Старый чердак",
-    genre: "Ужасы",
+    genre: "horrors",
     duration: "45 минут",
     players: "2-3 чел",
     difficulty: "легкий",

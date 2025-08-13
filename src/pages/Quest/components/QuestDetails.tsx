@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { QuestType } from "@data/questsData";
 import playerIcon from "@/assets/icons/player.svg";
 import difficultyIcon from "@/assets/icons/difficulty.svg";
 import durationIcon from "@/assets/icons/duration.svg";
+import BookingPopup from "@/pages/Quest/components/BookingPopup";
 
 interface QuestDetailsProps {
   quest: QuestType;
@@ -10,7 +12,8 @@ interface QuestDetailsProps {
 const QuestDetails: React.FC<QuestDetailsProps> = ({
   quest: { genre, title, duration, players, difficulty, description },
 }) => {
-  // ПОВЫСЬ КАЧЕСТВО КАРТИНОК
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <main className="flex">
       <div className="flex flex-col pl-600 mt-16 pr-20">
@@ -49,13 +52,17 @@ const QuestDetails: React.FC<QuestDetailsProps> = ({
         <p className="text-questInfo lining-nums proportional-nums font-raleway text-sm non-italic font-medium leading-[1.5rem] mt-5 text-pretty break-words max-w-xl pl-8">
           {description}
         </p>
+
         <button
           type="button"
+          onClick={() => setIsPopupOpen(true)}
           className=" text-white bg-navigation font-raleway text-base non-italic font-extrabold leading-normal tracking-wider px-12 py-5 mt-10 w-fit rounded-full uppercase ml-8"
         >
           Забронировать
         </button>
       </div>
+
+      {isPopupOpen && <BookingPopup onClose={() => setIsPopupOpen(false)} />}
     </main>
   );
 };

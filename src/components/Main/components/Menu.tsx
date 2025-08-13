@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import list from "@/assets/icons/list.svg";
 import adventures from "@/assets/icons/adventures.svg";
 import horrors from "@/assets/icons/horrors.svg";
@@ -7,26 +6,36 @@ import detective from "@/assets/icons/detective.svg";
 import sciFi from "@/assets/icons/sci-fi.svg";
 
 interface MenuItem {
-  to: string;
+  genre: string;
   icon: string;
   alt: string;
   label: string;
 }
 
+interface MenuProps {
+  selectedGenre: string;
+  onSelectGenre: (genre: string) => void;
+}
+
 const menuItems: MenuItem[] = [
-  { to: "/", icon: list, alt: "list", label: "Все квесты" },
-  { to: "/1", icon: adventures, alt: "adventures", label: "Приключения" },
-  { to: "/2", icon: horrors, alt: "horrors", label: "Ужасы" },
-  { to: "/3", icon: mysticism, alt: "mysticism", label: "Мистика" },
-  { to: "/4", icon: detective, alt: "detective", label: "Детектив" },
-  { to: "/5", icon: sciFi, alt: "sci-fi", label: "Sci-fi" },
+  { genre: "all", icon: list, alt: "list", label: "Все квесты" },
+  {
+    genre: "adventures",
+    icon: adventures,
+    alt: "adventures",
+    label: "Приключения",
+  },
+  { genre: "horrors", icon: horrors, alt: "horrors", label: "Ужасы" },
+  { genre: "mysticism", icon: mysticism, alt: "mysticism", label: "Мистика" },
+  { genre: "detective", icon: detective, alt: "detective", label: "Детектив" },
+  { genre: "sci-fi", icon: sciFi, alt: "sci-fi", label: "Sci-fi" },
 ];
 
-const Menu: React.FC = () => {
+const Menu: React.FC<MenuProps> = ({ selectedGenre, onSelectGenre }) => {
   return (
     <nav className="flex items-center pl-[8.5rem] mt-12">
       <ul className="flex gap-x-10">
-        {menuItems.map(({ to, icon, alt, label }, index) => (
+        {menuItems.map(({ genre, icon, alt, label }, index) => (
           <li
             key={alt}
             className={`flex ${
@@ -35,16 +44,19 @@ const Menu: React.FC = () => {
                 : ""
             }`}
           >
-            <NavLink to={to} className="flex items-center gap-x-3 pr-[2.5rem]">
-              {({ isActive }) => (
-                <>
-                  <img src={icon} alt={alt} />
-                  <p className={isActive ? "border-b-2 border-navigation" : ""}>
-                    {label}
-                  </p>
-                </>
-              )}
-            </NavLink>
+            <button
+              onClick={() => onSelectGenre(genre)}
+              className="flex items-center gap-x-3 pr-[2.5rem]"
+            >
+              <img src={icon} alt={alt} />
+              <p
+                className={
+                  selectedGenre === genre ? "border-b-2 border-navigation" : ""
+                }
+              >
+                {label}
+              </p>
+            </button>
           </li>
         ))}
       </ul>
