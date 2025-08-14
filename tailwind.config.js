@@ -8,9 +8,11 @@ export default {
         navigation: "#f2890f",
         skype: "#c6c4c2",
         questInfo: "#e6e6e6",
+        checkBox: "#b8b8b8",
       },
       backgroundImage: {
         catalog: "linear-gradient(0deg, #141414 0%, #1F1D1D 100%)",
+        bookingPopup: "linear-gradient(0deg, #141414 0%, #1F1D1D 100%)",
         footerFade:
           "linear-gradient(180deg, rgba(19, 18, 18, 0) 0%, #131212 100%)",
         iconFade:

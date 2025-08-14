@@ -3,7 +3,7 @@ import { QuestType } from "@data/questsData";
 import playerIcon from "@/assets/icons/player.svg";
 import difficultyIcon from "@/assets/icons/difficulty.svg";
 import durationIcon from "@/assets/icons/duration.svg";
-import BookingPopup from "@/pages/Quest/components/BookingPopup";
+import BookingPopup from "@/pages/Quest/components/BookingPopup/BookingPopup";
 
 interface QuestDetailsProps {
   quest: QuestType;
