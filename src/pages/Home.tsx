@@ -13,6 +13,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-// жанры в тайтлах квестов
-// крестик попапа

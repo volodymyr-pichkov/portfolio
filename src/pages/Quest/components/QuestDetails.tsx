@@ -4,6 +4,7 @@ import playerIcon from "@/assets/icons/player.svg";
 import difficultyIcon from "@/assets/icons/difficulty.svg";
 import durationIcon from "@/assets/icons/duration.svg";
 import BookingPopup from "@/pages/Quest/components/BookingPopup/BookingPopup";
+import { genreMap } from "@/data/genreMap";
 
 interface QuestDetailsProps {
   quest: QuestType;
@@ -18,7 +19,7 @@ const QuestDetails: React.FC<QuestDetailsProps> = ({
     <main className="flex">
       <div className="flex flex-col pl-600 mt-16 pr-20">
         <p className="text-navigation font-raleway text-sm non-italic font-medium leading-[1.25rem] lowercase">
-          {genre}
+          {genreMap[genre] || genre}
         </p>
         <h1 className="text-white font-raleway text-8xl non-italic font-black leading-[5.5rem] tracking-tighter uppercase">
           {title}

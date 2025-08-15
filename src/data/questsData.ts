@@ -56,7 +56,7 @@ export const cards: QuestType[] = [
   {
     id: "mars-2056",
     title: "Марс-2056",
-    genre: "sci-fi",
+    genre: "sciFi",
     duration: "90 минут",
     players: "2-4 чел",
     difficulty: "легкий",
@@ -89,7 +89,7 @@ export const cards: QuestType[] = [
   {
     id: "experiment",
     title: "Фатальный эксперимент",
-    genre: "sci-fi",
+    genre: "sciFi",
     duration: "85 минут",
     players: "5-8 чел",
     difficulty: "сложный",
@@ -100,7 +100,7 @@ export const cards: QuestType[] = [
   {
     id: "metro-2033",
     title: "Метро 2033",
-    genre: "post-apocalypse",
+    genre: "postApocalypse",
     duration: "90 минут",
     players: "6-8 чел",
     difficulty: "средний",
