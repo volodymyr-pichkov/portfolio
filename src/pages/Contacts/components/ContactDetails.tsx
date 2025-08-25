@@ -13,18 +13,18 @@ const ContactDetails: React.FC = () => {
   };
 
   return (
-    <div className="grid grid-rows-2 px-8 md:px-36">
+    <main className="px-4 sm:px-8 md:px-36 min-h-screen">
       <div className="pt-16">
-        <p className="text-navigation font-raleway text-sm font-medium leading-[1.2rem]">
+        <p className="text-navigation font-raleway text-sm font-medium leading-5">
           квесты в Одессе
         </p>
-        <h1 className="text-white font-raleway text-6xl font-extrabold leading-[4.4rem] mt-1">
+        <h1 className="text-white font-raleway text-4xl sm:text-5xl md:text-6xl font-extrabold leading-snug sm:leading-[4rem] md:leading-[4.4rem] mt-1">
           Контакты
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-24">
-        <dl className="space-y-4 text-questInfo font-raleway text-sm font-medium leading-[1.3rem]">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-24 mt-10">
+        <dl className="flex-1 space-y-4 text-questInfo font-raleway text-sm font-medium leading-5 md:leading-[1.3rem]">
           <ContactItem label="Адрес" value="Одесса, улица Мира, дом 77" />
           <ContactItem
             label="Режим работы"
@@ -34,7 +34,7 @@ const ContactDetails: React.FC = () => {
           <ContactItem label="E-mail" value="info@questodessa.com" />
         </dl>
 
-        <div className="w-full h-80 md:h-96 lg:h-128">
+        <div className="flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-128">
           <LoadScript
             googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ""}
           >
@@ -48,7 +48,7 @@ const ContactDetails: React.FC = () => {
           </LoadScript>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
