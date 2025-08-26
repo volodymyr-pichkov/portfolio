@@ -3,7 +3,7 @@ import telegram from "@/assets/network/telegram.svg";
 
 const Network: React.FC = () => {
   return (
-    <div className="flex gap-2 pl-8 pb-6">
+    <div className="flex gap-3 sm:gap-4 md:gap-6 px-4 sm:px-6 md:px-8 py-4 sm:py-6">
       <a
         href="https://www.facebook.com/?locale=ru_RU"
         target="_blank"
@@ -14,7 +14,7 @@ const Network: React.FC = () => {
         <img
           src={facebook}
           alt="Facebook"
-          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
         />
       </a>
       <a
@@ -27,7 +27,7 @@ const Network: React.FC = () => {
         <img
           src={telegram}
           alt="Telegram"
-          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
         />
       </a>
     </div>
