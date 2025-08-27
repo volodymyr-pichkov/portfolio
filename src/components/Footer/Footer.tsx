@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         role="contentinfo"
         aria-label="Contact Information"
       >
-        <div className="h-full flex items-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-6 md:px-8 py-4 sm:py-6">
+        <div className="h-full flex items-center gap-3 sm:gap-4 md:gap-6 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-24 py-4">
           <Network />
         </div>
       </footer>

@@ -12,18 +12,18 @@ const BookingPopup: React.FC<BookingPopupProps> = ({ onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 flex justify-center items-center z-50"
+      className="fixed inset-0 flex justify-center items-center z-50 px-4 sm:px-6"
       style={{ backgroundColor: "rgba(61, 51, 51, 0.96)" }}
     >
-      <div className="bg-bookingPopup rounded-lg p-8 w-96 relative">
+      <div className="bg-bookingPopup rounded-lg p-6 sm:p-8 w-full max-w-sm sm:max-w-md md:max-w-lg relative">
         <button
           onClick={onClose}
-          className="absolute right-3 top-3 mt-2 mr-4 text-gray-500 hover:text-gray-700 text-xl font-bold"
+          className="absolute right-3 top-3 mt-2 mr-4 text-gray-400 hover:text-gray-200 text-2xl font-bold"
           aria-label="Закрыть"
         >
           &times;
         </button>
-        <h2 className="text-white lining-nums proportional-nums font-raleway text-2xl font-extrabold leading-[7.5rem]">
+        <h2 className="text-white lining-nums proportional-nums font-raleway text-xl sm:text-2xl font-extrabold leading-[3rem] sm:leading-[4rem]">
           Оставить заявку
         </h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -55,7 +55,7 @@ const BookingPopup: React.FC<BookingPopupProps> = ({ onClose }) => {
           <button
             type="submit"
             disabled={!formData.agreed}
-            className={`font-bold py-3 rounded-full transition mt-7 mx-10
+            className={`font-bold py-3 rounded-full transition mt-6 sm:mt-7 mx-4 sm:mx-10
     ${
       formData.agreed
         ? "bg-navigation hover:bg-orange-600"
@@ -71,7 +71,7 @@ const BookingPopup: React.FC<BookingPopupProps> = ({ onClose }) => {
             onChange={handleChange}
             className="mt-6"
             label={
-              <span className="text-questInfo font-raleway text-sm font-medium leading-relaxed break-words whitespace-normal">
+              <span className="text-questInfo font-raleway text-xs sm:text-sm font-medium leading-relaxed break-words whitespace-normal">
                 Я согласен с{" "}
                 <span className="underline underline-custom">
                   правилами обработки персональных данных

@@ -6,7 +6,7 @@ interface ContactItemProps {
 const ContactItem: React.FC<ContactItemProps> = ({ label, value }) => (
   <>
     <dt className="tracking-tighter font-bold">{label}</dt>
-    <dd className="font-medium">{value}</dd>
+    <dd className="font-medium lining-nums proportional-nums">{value}</dd>
   </>
 );
 

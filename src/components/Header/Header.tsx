@@ -9,7 +9,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="text-general w-full">
-      <nav className="flex items-center px-4 sm:px-6 lg:px-12 py-4">
+      <nav className="flex items-center px-4 sm:px-8 md:px-16 lg:px-16 xl:px-24 py-4">
         <div className="flex-shrink-0">
           <Logotype />
         </div>

@@ -33,22 +33,18 @@ const menuItems: MenuItem[] = [
 
 const Menu: React.FC<MenuProps> = ({ selectedGenre, onSelectGenre }) => {
   return (
-    <nav className="flex items-center pl-[8.5rem] mt-12">
-      <ul className="flex gap-x-10">
-        {menuItems.map(({ genre, icon, alt, label }, index) => (
+    <nav className="flex items-center mt-6 sm:mt-8 md:mt-12 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-24 2xl:pl-[8.5rem] overflow-x-auto">
+      <ul className="flex gap-x-4 sm:gap-x-6 md:gap-x-8 whitespace-nowrap">
+        {menuItems.map(({ genre, icon, alt, label }) => (
           <li
             key={alt}
-            className={`flex ${
-              index !== menuItems.length - 1
-                ? "border-r border-white border-opacity-30"
-                : ""
-            }`}
+            className="flex sm:border-r sm:border-white sm:border-opacity-30 last:border-none"
           >
             <button
               onClick={() => onSelectGenre(genre)}
-              className="flex items-center gap-x-3 pr-[2.5rem]"
+              className="flex items-center gap-x-2 sm:gap-x-3 pr-4 sm:pr-8 md:pr-10 lg:pr-[2.5rem]"
             >
-              <img src={icon} alt={alt} />
+              <img src={icon} alt={alt} className="w-5 h-5 sm:w-6 sm:h-6" />
               <p
                 className={
                   selectedGenre === genre ? "border-b-2 border-navigation" : ""

@@ -1,19 +1,19 @@
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import ContactItem from "./ContactItem";
 
 const ContactDetails: React.FC = () => {
-  const containerStyle = {
-    width: "100%",
-    height: "100%",
-  };
-
   const center = {
     lat: 46.4825,
     lng: 30.7233,
   };
 
+  const { isLoaded, loadError } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "",
+  });
+
   return (
-    <main className="px-4 sm:px-8 md:px-36 min-h-screen">
+    <main className="px-4 sm:px-8 md:px-12 lg:px-24 xl:px-36 min-h-screen">
       <div className="pt-16">
         <p className="text-navigation font-raleway text-sm font-medium leading-5">
           квесты в Одессе
@@ -23,8 +23,8 @@ const ContactDetails: React.FC = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 md:gap-24 mt-10">
-        <dl className="flex-1 space-y-4 text-questInfo font-raleway text-sm font-medium leading-5 md:leading-[1.3rem]">
+      <div className="flex flex-col md:flex-row items-stretch gap-6 md:gap-8 lg:gap-12 xl:gap-24 mt-10">
+        <dl className="flex-1 min-w-0 md:pr-2 space-y-3 sm:space-y-4 text-questInfo font-raleway text-sm font-medium leading-5 md:leading-[1.3rem]">
           <ContactItem label="Адрес" value="Одесса, улица Мира, дом 77" />
           <ContactItem
             label="Режим работы"
@@ -34,18 +34,24 @@ const ContactDetails: React.FC = () => {
           <ContactItem label="E-mail" value="info@questodessa.com" />
         </dl>
 
-        <div className="flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-128">
-          <LoadScript
-            googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ""}
-          >
+        <div className="flex-1 min-w-0 w-full h-56 sm:h-64 md:h-[28rem] lg:h-[32rem] xl:h-[36rem] rounded-lg overflow-hidden shadow-md">
+          {loadError ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white">
+              Не удалось загрузить карту
+            </div>
+          ) : !isLoaded ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white">
+              Загрузка карты...
+            </div>
+          ) : (
             <GoogleMap
-              mapContainerStyle={containerStyle}
+              mapContainerClassName="w-full h-full"
               center={center}
               zoom={12}
             >
               <Marker position={center} />
             </GoogleMap>
-          </LoadScript>
+          )}
         </div>
       </div>
     </main>
