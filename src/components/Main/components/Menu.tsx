@@ -33,7 +33,7 @@ const menuItems: MenuItem[] = [
 
 const Menu: React.FC<MenuProps> = ({ selectedGenre, onSelectGenre }) => {
   return (
-    <nav className="flex items-center mt-6 sm:mt-8 md:mt-12 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-24 2xl:pl-[8.5rem] overflow-x-auto">
+    <nav className="flex items-center mt-6 sm:mt-8 md:mt-12 px-4 sm:px-8 md:px-16 lg:px-16 xl:px-24 2xl:pl-[8.5rem] overflow-x-auto scrollbar-hidden">
       <ul className="flex gap-x-4 sm:gap-x-6 md:gap-x-8 whitespace-nowrap">
         {menuItems.map(({ genre, icon, alt, label }) => (
           <li
