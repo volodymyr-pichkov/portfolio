@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         </div>
       </footer>
 
-      <div className="absolute bottom-0 left-0 right-0 w-full h-20 bg-footerFade opacity-80 pointer-events-none z-10" />
+      <div className="fixed bottom-0 left-0 right-0 w-full h-20 bg-footerFade opacity-80 pointer-events-none z-10" />
     </>
   );
 };
