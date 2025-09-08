@@ -43,13 +43,15 @@ const Quest: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen w-full bg-cover bg-center pb-24 sm:pb-28 md:pb-32"
+      className="min-h-screen w-full bg-cover bg-center flex flex-col"
       style={{
         backgroundImage: `url(${quest.image})`,
       }}
     >
       <Header />
-      <QuestDetails quest={quest} />
+      <div className="flex-1">
+        <QuestDetails quest={quest} />
+      </div>
       <Footer />
     </div>
   );

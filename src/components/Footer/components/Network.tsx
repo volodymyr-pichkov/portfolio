@@ -3,18 +3,18 @@ import telegram from "@/assets/network/telegram.svg";
 
 const Network: React.FC = () => {
   return (
-    <div className="flex gap-3 sm:gap-4 md:gap-6 px-4 sm:px-6 md:px-8 py-4 sm:py-6">
+    <div className="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 md:bottom-6 md:left-6 z-50 flex gap-3 sm:gap-4">
       <a
         href="https://www.facebook.com/?locale=ru_RU"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Facebook"
-        className="shrink-0 transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+        className="group inline-flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center overflow-hidden rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <img
           src={facebook}
           alt="Facebook"
-          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
+          className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 transition-transform duration-200 group-hover:scale-110"
         />
       </a>
       <a
@@ -22,12 +22,12 @@ const Network: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Telegram"
-        className="shrink-0 transition-transform duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+        className="group inline-flex h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 items-center justify-center overflow-hidden rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <img
           src={telegram}
           alt="Telegram"
-          className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8"
+          className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 transition-transform duration-200 group-hover:scale-110"
         />
       </a>
     </div>
